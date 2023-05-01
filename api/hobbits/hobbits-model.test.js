@@ -38,13 +38,13 @@ describe("getById", () => {
 
 describe("insert", () => {
   test("[4] eklenen hobiti doğru formatta döner", async () => {
-    const newHobbit = await hobbitsModel.insert({ name: "yigit" });
+    const newHobbit = await hobbitsModel.insert({ name: "oguzhan" });
     expect(newHobbit).toBeDefined();
-    expect(newHobbit).toMatchObject({ name: "yigit" });
-    expect(newHobbit).toHaveProperty("name", "yigit");
+    expect(newHobbit).toMatchObject({ name: "oguzhan" });
+    expect(newHobbit).toHaveProperty("name", "oguzhan");
   });
   test("[5] hobbit başarıyla eklenir", async () => {
-    await hobbitsModel.insert({ name: "yigit" });
+    await hobbitsModel.insert({ name: "oguzhan" });
     const hobbits = await db("hobbits");
     expect(hobbits).toHaveLength(5);
   });

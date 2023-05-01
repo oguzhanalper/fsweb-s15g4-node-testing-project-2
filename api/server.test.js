@@ -39,9 +39,9 @@ describe("API END POINT TESTLERI", () => {
     });
   });
   test("[4] yeni hobbit'i dönüyor", async () => {
-    const newHobbit = { name: "yigit" };
+    const newHobbit = { name: "oguzhan" };
     const res = await request(server).post("/api/hobbits").send(newHobbit);
-    expect(res.body).toEqual({ id: 5, name: "yigit" });
+    expect(res.body).toEqual({ id: 5, name: "oguzhan" });
   });
   describe("[GET] /api/hobbits/:id", () => {
     test("[5] istenen id'li hobbiti dönüyor", async () => {
