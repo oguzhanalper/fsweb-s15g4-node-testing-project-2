@@ -1,4 +1,4 @@
-const db = require("./../../data/dbConfig");
+const db = require("../../data/db-config");
 const hobbitsModel = require("./hobbits-model");
 
 test("test environment testing olarak ayarlı", () => {

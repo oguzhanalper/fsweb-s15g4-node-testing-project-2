@@ -1,10 +1,13 @@
 const express = require("express");
 const server = express();
-const Router = require("./starwars/starwars-router");
+const hobbitsRouter = require("./hobbits/hobbits-router");
+
 server.use(express.json());
 
+server.use("/api/hobbits", hobbitsRouter);
+
 server.get("/", (req, res) => {
-  res.json({ message: "Hey, server is up and running..." });
+  res.status(200).json({ message: "up" });
 });
-server.use("/api/starwars", Router);
+
 module.exports = server;
